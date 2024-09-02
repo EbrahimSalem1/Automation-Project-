@@ -3,13 +3,12 @@ package pages;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.MethodHandles;
 
-public class HomePage  {
-
-    WebDriver driver;
+public class HomePage extends MethodHandles {
 
     public HomePage(WebDriver driver){
-        this.driver = driver;
+        super(driver);
     }
 
     public final By signUpAndLoginBtn = By.cssSelector("a[href='/login']");

@@ -20,6 +20,7 @@ public class MethodHandles {
     WebDriverWait wait;
 
     Actions actions;
+
     static ExtentReports extent;
     static ExtentTest test;
 
@@ -124,53 +125,6 @@ public class MethodHandles {
         return text;
     }
 
-    protected boolean isDisplayed(By locator, int time) {
-        boolean flag = false;
-        for (int i = 0; i < 5; i++) {
-            try {
-                explicitWait(locator, time);
-                setSteps();
-                addBorderToElement(driver, webElement(locator));
-                flag = webElement(locator).isDisplayed();
-                break;
-            } catch (StaleElementReferenceException e) {
-
-            }
-        }
-        return flag;
-    }
-
-    protected boolean isSelected(By locator, int time) {
-        boolean flag = false;
-        for (int i = 0; i < 5; i++) {
-            try {
-                explicitWait(locator, time);
-                setSteps();
-                addBorderToElement(driver, webElement(locator));
-                flag = webElement(locator).isSelected();
-                break;
-            } catch (StaleElementReferenceException e) {
-
-            }
-        }
-        return flag;
-    }
-
-    protected boolean isEnabled(By locator, int time) {
-        boolean flag = false;
-        for (int i = 0; i < 5; i++) {
-            try {
-                explicitWait(locator, time);
-                setSteps();
-                addBorderToElement(driver, webElement(locator));
-                flag = webElement(locator).isEnabled();
-                break;
-            } catch (StaleElementReferenceException e) {
-
-            }
-        }
-        return flag;
-    }
 
     protected void clickWithActions(By locator, int time) {
         actions = new Actions(driver);
@@ -294,20 +248,10 @@ public class MethodHandles {
         test.info(getMethodName());
     }
 
+
     private static void addBorderToElement(WebDriver driver, WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].style.border = '5px solid red';", element);
     }
 
-    public static void myAssertEquals(String actual, String expected) {
-        test.info(MarkupHelper.createLabel("------------------- Ends of Steps -------------------", ExtentColor.TEAL));
-
-        test.info(MarkupHelper.createLabel("------------------- actual Result -------------------", ExtentColor.TEAL));
-        test.info(actual);
-
-        test.info(MarkupHelper.createLabel("------------------- expected Result  -------------------", ExtentColor.TEAL));
-        test.info(expected);
-
-        assertEquals(actual, expected);
-    }
 }

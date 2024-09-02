@@ -64,9 +64,10 @@ public class RegistartionTC1 extends BaseTests {
 
         Assert.assertEquals(register.loggedInUserNameTxtVisible() , "Logged in as ibrahim");
 
-        register.clickOnDeleteAccount();
-        Assert.assertEquals(register.accountDeletedTxtVisible() , "ACCOUNT DELETED!");
-        register.clickOnContinueDeleteBtn();
+        // if you want implement 3th Test Case in smoke test xml file should do comment for (delete account) line code below
+//        register.clickOnDeleteAccount();
+//        Assert.assertEquals(register.accountDeletedTxtVisible() , "ACCOUNT DELETED!");
+//        register.clickOnContinueDeleteBtn();
     }
 
 }

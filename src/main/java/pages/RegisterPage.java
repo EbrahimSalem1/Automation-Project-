@@ -4,14 +4,12 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import utils.MethodHandles;
 
-public class RegisterPage {
-
-
-    WebDriver driver;
+public class RegisterPage extends MethodHandles {
 
     public RegisterPage(WebDriver driver){
-        this.driver = driver;
+        super(driver);
     }
 
     Select select;

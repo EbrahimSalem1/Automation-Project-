@@ -13,14 +13,14 @@
             </class>
         </classes>
     </test>
-<!--    <test name="RegistrationTest1">-->
-<!--        <parameter name="browser" value="chrome">-->
-<!--        </parameter>-->
-<!--        <classes>-->
-<!--            <class name="registrationPage.RegistartionTC1">-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="RegistrationTest1">
+        <parameter name="browser" value="chrome">
+        </parameter>
+        <classes>
+            <class name="registrationPage.RegistartionTC1">
+            </class>
+        </classes>
+    </test>
     <test name="RegistrationTest5">
         <parameter name="browser" value="chrome">
         </parameter>
