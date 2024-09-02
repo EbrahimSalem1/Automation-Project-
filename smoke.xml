@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Test Suite">
+    <listeners>
+        <listener class-name="base.TestListeners"> <!-- the directory of the listeners class in the project-->
+        </listener>
+    </listeners>
+    <test name="HomeTest">
+        <parameter name="browser" value="chrome">
+        </parameter>
+        <classes>
+            <class name="homePage.HomeTest">
+            </class>
+        </classes>
+    </test>
+<!--    <test name="RegistrationTest1">-->
+<!--        <parameter name="browser" value="chrome">-->
+<!--        </parameter>-->
+<!--        <classes>-->
+<!--            <class name="registrationPage.RegistartionTC1">-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="RegistrationTest5">
+        <parameter name="browser" value="chrome">
+        </parameter>
+        <classes>
+            <class name="registrationPage.RegistartionTC5">
+            </class>
+        </classes>
+    </test>
+</suite>
