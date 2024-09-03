@@ -1,4 +1,4 @@
-<h1># Automation Registartion full cycle  </h1> 
+<h1># Automation Registration full cycle  </h1> 
 <p>using Selenium with java - Page Object Model (POM) 
   - Data Driven (Json) - allure report </p> 
 
