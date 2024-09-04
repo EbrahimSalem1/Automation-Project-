@@ -15,11 +15,12 @@ public class RegistartionTC5 extends BaseTests {
 
     String regFile = System.getProperty("user.dir") + "\\src\\test\\java\\resources\\RegisterData.json";
 
+    RegisterPage register;
 
     @Test
     public void RegisterUserWithExistingEmailTC5(){
 
-        RegisterPage register = homePage.clickOnSignUpAndLoginBtn1();
+        register = homePage.clickOnSignUpAndLoginBtn1();
         Assert.assertEquals(register.userSignUpTextVisible() , "New User Signup!");
         register.insertRegisterName(readJson(regFile , "Name"));
         register.insertRegisterEmail(readJson(regFile , "Email"));

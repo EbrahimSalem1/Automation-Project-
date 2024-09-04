@@ -29,4 +29,12 @@
             </class>
         </classes>
     </test>
+    <test name="ContactUsTest6">
+        <parameter name="browser" value="chrome">
+        </parameter>
+        <classes>
+            <class name="contactUsPage.ContactUsFormTC6">
+            </class>
+        </classes>
+    </test>
 </suite>

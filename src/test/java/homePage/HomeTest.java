@@ -10,11 +10,12 @@ import pages.HomePage;
 @Listeners(TestListeners.class)
 public class HomeTest extends BaseTests {
 
+    HomePage homePage1;
 
     @Test
     public void TestHomePageIsVisible(){
 
-        HomePage homePage1 = homePage;
+        homePage1 = homePage;
         Assert.assertEquals(homePage1.homePageVisible() , "Home");
         homePage1.clickOnSignUpAndLoginBtn1();
     }

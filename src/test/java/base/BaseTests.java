@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
+import pages.ContactUsPage;
 import pages.HomePage;
 import pages.RegisterPage;
 //import reader.ReadDataFromJson;
@@ -22,6 +23,7 @@ public class BaseTests {
     WebDriver driver;
     protected HomePage homePage;
     protected RegisterPage registerPage;
+    protected ContactUsPage contactUsPage;
 
     ChromeOptions chromeOptions;
     FirefoxOptions firefoxOptions;
@@ -35,6 +37,7 @@ public class BaseTests {
         driver.get("https://automationexercise.com/");
         homePage = new HomePage(driver);
         registerPage = new RegisterPage(driver);
+        contactUsPage = new ContactUsPage(driver);
     }
 
     @Parameters("browser")

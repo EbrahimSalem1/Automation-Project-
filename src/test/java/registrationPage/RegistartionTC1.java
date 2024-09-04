@@ -13,6 +13,7 @@ import static utils.DataDriven.JsonClass.readJson;
 public class RegistartionTC1 extends BaseTests {
 
 
+    RegisterPage register;
     String regFile = System.getProperty("user.dir") + "\\src\\test\\java\\resources\\RegisterData.json";
     String accountInfoFile = System.getProperty("user.dir") + "\\src\\test\\java\\resources\\AccountInfo.json";
     String addressInfoFile = System.getProperty("user.dir") + "\\src\\test\\java\\resources\\AddressInfo.json";
@@ -21,7 +22,7 @@ public class RegistartionTC1 extends BaseTests {
     @Test
     public void TestCase1RegisterUser(){
 
-        RegisterPage register = homePage.clickOnSignUpAndLoginBtn1();
+        register = homePage.clickOnSignUpAndLoginBtn1();
         Assert.assertEquals(register.userSignUpTextVisible() , "New User Signup!");
         register.insertRegisterName(readJson(regFile , "Name"));
         register.insertRegisterEmail(readJson(regFile , "Email"));
