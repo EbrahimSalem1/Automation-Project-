@@ -36,7 +36,7 @@
 7. Click 'Signup' button
 8. Verify error 'Email Address already exist!' is visible
 
-<h2>#Test Case 6: Contact Us Form</h2>
+<h2>#Test Case 3: Contact Us Form</h2>
 
 1. Launch browser
 2. Navigate to url 'http://automationexercise.com'
