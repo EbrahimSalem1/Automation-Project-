@@ -1,8 +1,9 @@
 name: Reun Automated Tests
 on: 
+  push:
+    branches: [ "master" ]
   pull_request:
-    branches: 
-      - master
+    branches: [ "master" ]
 
 jobs:
   TestJobs:
