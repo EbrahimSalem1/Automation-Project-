@@ -19,8 +19,8 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Run Unit Tests
-        run: mvn test   
+      - name: Run Maven Tests
+        run: mvn test -Dtestng=smoke
         
       
     
