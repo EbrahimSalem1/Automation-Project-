@@ -20,7 +20,7 @@ jobs:
           cache: maven
 
       - name: Run Maven Tests
-        run: mvn test -Dtestng=smoke
+        run: mvn test -Dsmoke
         
       
     
